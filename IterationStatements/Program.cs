@@ -12,10 +12,12 @@ namespace IterationStatements
 
                 //Create a List called "numbers" - DONE!
                 var numbers = new List<int>();
-            
+
             //-----START HERE------------------------------------------
             //Create a variable of type int and name it num
-            //initialize the variable with a value of 0
+            //initialize the variable with a value of 0 - DONE!
+
+            var num = 0;
 
 
 
@@ -26,9 +28,16 @@ namespace IterationStatements
 
                 // Then add num to the collection - numbers
                     // Hint: reference num inside of the Add method's parentheses
-                numbers.Add(/* num */);
+                //numbers.Add(/* num */);
 
             } // <---- While your variable is less than 100
+
+            do
+            {
+                num++;
+                numbers.Add(num);
+
+            } while (num < 100);
 
 
 
@@ -41,6 +50,11 @@ namespace IterationStatements
 
             }
 
+            while (num < 200)
+            {
+                num++;
+                numbers.Add(num);
+            }
 
             // This is to show the user that the numbers will start increasing on the console
             Console.WriteLine("Increase:");
@@ -48,6 +62,11 @@ namespace IterationStatements
 
             // Create a foreach loop using the collection - numbers
                 //In the scope of the foreach loop, print each number in numbers
+
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
              
 
 
@@ -61,9 +80,9 @@ namespace IterationStatements
                 // AND as long as i is greater than or equal to 0
                 // Decrement i by 1
 
-            //start for loop here
+            for (int i = 199; i <= numbers.Count && i >= 0; i--)  //start for loop here
             {
-                // place numbers[i] inside of the Console.WriteLine() method
+                Console.WriteLine($"{numbers[i]}");  // place numbers[i] inside of the Console.WriteLine() method
             }
 
             //------------End of exercise
